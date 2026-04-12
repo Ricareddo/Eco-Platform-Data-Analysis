@@ -1,0 +1,1473 @@
+/* ============================================
+   Food Analyzer - B端专业设计规范系统 v4.0
+   对标企业级SaaS产品视觉标准
+   规范体系：圆角 | 间距栅格 | 文字层级 | 图标系统
+   ============================================ */
+
+/* ============================================
+   CSS 变量定义 - B端设计令牌系统
+   ============================================ */
+
+:root {
+    /* 品牌主色 */
+    --brand-primary: #2563EB;
+    --brand-primary-hover: #1D4ED8;
+    --brand-primary-light: #DBEAFE;
+    --brand-secondary: #7C3AED;
+    --brand-secondary-hover: #6D28D9;
+
+    /* 功能色 */
+    --color-success: #10B981;
+    --color-success-light: #D1FAE5;
+    --color-warning: #F59E0B;
+    --color-warning-light: #FEF3C7;
+    --color-error: #EF4444;
+    --color-error-light: #FEE2E2;
+    --color-info: #3B82F6;
+    --color-info-light: #DBEAFE;
+
+    /* 中性色 - 灰度系统 */
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+    --gray-900: #0F172A;
+
+    /* 图标颜色 */
+    --icon-color-default: #666666;
+    --icon-color-active: var(--brand-primary);
+    --icon-color-hover: var(--brand-primary-hover);
+
+    /* ============================================
+       圆角规范系统 (B端专业标准)
+       大卡片/侧边栏: 12px
+       按钮/输入框/Tabs: 8px
+       小标签/Badge: 4px
+       ============================================ */
+    
+    --radius-xs: 4px;      /* 小标签、Badge、Tag */
+    --radius-sm: 6px;      /* 内部元素、小型组件 */
+    --radius-md: 8px;      /* 按钮、输入框、Tabs、卡片内部元素 */
+    --radius-lg: 12px;     /* 大卡片、侧边栏容器、主要面板 */
+    --radius-xl: 16px;     /* 特殊大型容器、Modal */
+    --radius-full: 9999px; /* 圆形元素、Avatar */
+
+    /* ============================================
+       间距规范系统 (8px 栅格系统)
+       所有间距为8的倍数，确保视觉一致性
+       ============================================ */
+    
+    --spacing-unit: 8px;        /* 基础单位 */
+    --spacing-xs: 4px;          /* 极小间距 (0.5单位) */
+    --spacing-sm: 8px;          /* 小间距 (1单位) */
+    --spacing-md: 16px;         /* 中等间距 (2单位) */
+    --spacing-lg: 24px;         /* 大间距 (3单位) */
+    --spacing-xl: 32px;         **大间距 (4单位) */
+    --spacing-2xl: 48px;        /* 超大间距 (6单位) */
+    --spacing-3xl: 64px;        /* 特大间距 (8单位) */
+
+    /* ============================================
+       文字层级规范系统 (B端专业标准)
+       一级标题: 24px / 700 weight
+       二级标题: 18px / 600 weight
+       正文: 14px / 400 weight
+       辅助文字: 12px / 400 weight (#999)
+       ============================================ */
+    
+    /* 字号定义 */
+    --font-size-h1: 24px;           /* 一级标题 */
+    --font-size-h2: 18px;           /* 二级标题 */
+    --font-size-body: 14px;         /* 正文 */
+    --font-size-caption: 12px;      /* 辅助文字 */
+    --font-size-small: 11px;        /* 极小文字（表格、标签） */
+    
+    /* 字重定义 */
+    --font-weight-bold: 700;        /* 一级标题 */
+    --font-weight-semibold: 600;    /* 二级标题、强调文字 */
+    --font-weight-medium: 500;      /* 次要强调、按钮文字 */
+    --font-weight-regular: 400;     /* 正文、辅助文字 */
+    
+    /* 行高定义 */
+    --line-height-tight: 1.25;      /* 标题行高 */
+    --line-height-normal: 1.5;      /* 正文行高 */
+    --line-height-relaxed: 1.75;    /* 宽松行高（长文本） */
+
+    /* 阴影系统 */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* 过渡动画 */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+
+    /* 图标线宽规范 */
+    --icon-stroke-width: 1.5px;
+}
+
+/* ============================================
+   全局基础样式重置与增强
+   ============================================ */
+
+/* 主容器样式 */
+.main .block-container {
+    max-width: 1400px !important;
+    padding-top: var(--spacing-lg) !important;
+    padding-bottom: var(--spacing-lg) !important;
+}
+
+/* 全局字体设置 */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 选择文本颜色 */
+::selection {
+    background: var(--brand-primary-light);
+    color: var(--brand-primary);
+}
+
+/* ============================================
+   文字层级系统 (严格按照B端规范)
+   ============================================ */
+
+/* 一级标题：24px / 700 / 紧凑行高 */
+h1, .text-h1 {
+    font-size: var(--font-size-h1) !important;
+    font-weight: var(--font-weight-bold) !important;
+    line-height: var(--line-height-tight) !important;
+    color: var(--gray-900) !important;
+    margin-bottom: var(--spacing-md) !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* 二级标题：18px / 600 / 正常行高 */
+h2, h3, .text-h2 {
+    font-size: var(--font-size-h2) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: var(--line-height-normal) !important;
+    color: var(--gray-800) !important;
+    margin-bottom: var(--spacing-sm) !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* 三级标题（可选）：16px / 600 */
+.text-h3 {
+    font-size: 16px !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: var(--line-height-normal) !important;
+    color: var(--gray-700) !important;
+}
+
+/* 正文：14px / 400 / 舒适行高 */
+p, .text-body, body {
+    font-size: var(--font-size-body) !important;
+    font-weight: var(--font-weight-regular) !important;
+    line-height: var(--line-height-normal) !important;
+    color: var(--gray-700) !important;
+}
+
+/* 辅助文字：12px / 400 / 浅灰色 (#999) */
+.text-caption, small, .stCaption {
+    font-size: var(--font-size-caption) !important;
+    font-weight: var(--font-weight-regular) !important;
+    line-height: var(--line-height-normal) !important;
+    color: #999999 !important;
+}
+
+/* 极小文字：11px / 400（用于表格、标签等） */
+.text-small, label {
+    font-size: var(--font-size-small) !important;
+    font-weight: var(--font-weight-regular) !important;
+    color: var(--gray-600) !important;
+}
+
+/* ============================================
+   按钮系统 - 企业级B端交互规范 v4.0
+   主次分明 | 状态反馈 | 加载保护 | 防重复点击
+   ============================================ */
+
+/* ===== 基础按钮样式 ===== */
+.stButton > button {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal) !important;
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    font-weight: var(--font-weight-medium) !important;
+    letter-spacing: 0.02em !important;
+    padding: 10px 20px !important;  /* 统一内边距 */
+    border: 2px solid transparent !important;
+    font-size: var(--font-size-body) !important;  /* 14px */
+    line-height: 1.5 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    outline: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-height: 40px !important;  /* 最小点击区域 */
+}
+
+/* ===== Primary 主色填充按钮 - 核心操作 ===== 
+   使用场景：开始采集、保存设置、提交表单等主要操作
+*/
+.stButton > button[kind="primary"],
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Primary Hover态 - 背景加深 + 阴影扩散 + 轻微上浮 */
+.stButton > button[kind="primary"]:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--brand-primary-hover) 0%, #1E40AF 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3), 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Primary Active态 - 下沉效果 + 深色背景 */
+.stButton > button[kind="primary"]:active,
+.btn-primary:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%) !important;
+}
+
+/* ===== Secondary 次要按钮 - 幽灵/线框风格 ===== 
+   使用场景：测试模式、恢复默认、取消等次要操作
+*/
+.stButton > button[kind="secondary"],
+.btn-secondary {
+    background: transparent !important;
+    color: var(--gray-700) !important;
+    font-weight: var(--font-weight-medium) !important;  /* 500 */
+    border: 2px solid var(--gray-300) !important;
+    box-shadow: none !important;
+}
+
+/* Secondary Hover态 - 边框加深 + 浅灰背景 */
+.stButton > button[kind="secondary"]:hover,
+.btn-secondary:hover {
+    background: var(--gray-100) !important;
+    border-color: var(--gray-400) !important;
+    color: var(--gray-900) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* Secondary Active态 - 背景加深 */
+.stButton > button[kind="secondary"]:active,
+.btn-secondary:active {
+    transform: translateY(0) !important;
+    background: var(--gray-200) !important;
+    border-color: var(--gray-500) !important;
+}
+
+/* ===== Ghost 幽灵按钮 - 极简风格 ===== 
+   使用场景：辅助操作、链接式按钮
+*/
+.stButton > button[kind="ghost"],
+.btn-ghost {
+    background: transparent !important;
+    color: var(--brand-primary) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 12px !important;
+}
+
+.stButton > button[kind="ghost"]:hover,
+.btn-ghost:hover {
+    background: var(--brand-primary-light) !important;
+    color: var(--brand-primary-hover) !important;
+}
+
+.stButton > button[kind="ghost"]:active,
+.btn-ghost:active {
+    background: var(--brand-primary-light) !important;
+    opacity: 0.8 !important;
+}
+
+/* ===== Danger 危险/删除按钮 ===== 
+   使用场景：删除、清空等破坏性操作
+*/
+.stButton > button[kind="danger"],
+.btn-danger {
+    background: linear-gradient(135deg, var(--color-error) 0%, #DC2626 100%) !important;
+    color: white !important;
+    font-weight: var(--font-weight-semibold) !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2) !important;
+}
+
+.stButton > button[kind="danger"]:hover,
+.btn-danger:hover {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3) !important;
+}
+
+.stButton > button[kind="danger"]:active,
+.btn-danger:active {
+    transform: translateY(0) !important;
+    background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%) !important;
+}
+
+/* ===== Success 成功按钮 ===== */
+.stButton > button[kind="success"],
+.btn-success {
+    background: linear-gradient(135deg, var(--color-success) 0%, #059669 100%) !important;
+    color: white !important;
+    font-weight: var(--font-weight-semibold) !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2) !important;
+}
+
+.stButton > button[kind="success"]:hover,
+.btn-success:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* ===== 默认按钮样式（未指定kind时）===== */
+.stButton > button:not([kind]):not(.btn-primary):not(.btn-secondary):not(.btn-ghost):not(.btn-danger):not(.btn-success) {
+    background: var(--gray-100) !important;
+    color: var(--gray-700) !important;
+    border: 1px solid var(--gray-200) !important;
+}
+
+.stButton > button:not([kind]):hover {
+    background: var(--gray-200) !important;
+    border-color: var(--gray-300) !important;
+    transform: translateY(-1px) !important;
+}
+
+.stButton > button:not([kind]):active {
+    transform: translateY(0) !important;
+    background: var(--gray-300) !important;
+}
+
+/* ===== 禁用状态 - 统一置灰 + 禁止交互 ===== */
+.stButton > button:disabled,
+.btn-disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    pointer-events: none !important;
+    background: var(--gray-200) !important;
+    color: var(--gray-400) !important;
+    border-color: var(--gray-300) !important;
+    box-shadow: none !important;
+}
+
+/* ===== 加载状态 - 防重复点击保护 ===== */
+.stButton > button.loading,
+.btn-loading {
+    position: relative !important;
+    color: transparent !important;
+    pointer-events: none !important;
+    cursor: wait !important;
+}
+
+.stButton > button.loading::after,
+.btn-loading::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 18px !important;
+    height: 18px !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin-left: -9px !important;
+    margin-top: -9px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-top-color: #FFFFFF !important;
+    border-radius: 50% !important;
+    animation: btn-spin 0.6s linear infinite !important;
+}
+
+@keyframes btn-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===== Focus焦点状态 - 键盘无障碍支持 ===== */
+.stButton > button:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+    outline: 2px solid var(--brand-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* ===== 按钮尺寸变体 ===== */
+
+/* 小号按钮 */
+.stButton > button[data-testid="baseButton-secondary"],
+.btn-sm {
+    padding: 6px 12px !important;
+    font-size: var(--font-size-caption) !important;  /* 12px */
+    min-height: 32px !important;
+}
+
+/* 大号按钮 */
+.btn-lg {
+    padding: 14px 28px !important;
+    font-size: 16px !important;
+    min-height: 48px !important;
+}
+
+/* 全宽按钮 */
+.stButton > button[width="full"],
+.btn-block {
+    width: 100% !important;
+}
+
+/* ============================================
+   卡片组件样式 (圆角: 12px)
+   ============================================ */
+
+.metric-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--gray-50) 100%) !important;
+    border-radius: var(--radius-lg) !important;  /* 12px 圆角 */
+    padding: var(--spacing-lg) !important;  /* 24px 内边距 */
+    box-shadow: var(--shadow-md) !important;
+    border: 1px solid var(--gray-200) !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.metric-card:hover {
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-4px);
+    border-color: var(--brand-primary-light) !important;
+}
+
+/* 成功提示框 */
+.success-box {
+    background-color: var(--color-success-light) !important;
+    border-left: 4px solid var(--color-success) !important;
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    padding: var(--spacing-md) !important;  /* 16px */
+    margin: var(--spacing-md) 0 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* 警告提示框 */
+.warning-box {
+    background-color: var(--color-warning-light) !important;
+    border-left: 4px solid var(--color-warning) !important;
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    padding: var(--spacing-md) !important;  /* 16px */
+    margin: var(--spacing-md) 0 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* 错误提示框 */
+.error-box {
+    background-color: var(--color-error-light) !important;
+    border-left: 4px solid var(--color-error) !important;
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    padding: var(--spacing-md) !important;  /* 16px */
+    margin: var(--spacing-md) 0 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* 信息提示框 */
+.info-box {
+    background-color: var(--color-info-light) !important;
+    border-left: 4px solid var(--color-info) !important;
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    padding: var(--spacing-md) !important;  /* 16px */
+    margin: var(--spacing-md) 0 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* ============================================
+   侧边栏导航样式 (圆角: 12px)
+   ============================================ */
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, var(--gray-100) 0%, var(--gray-50) 100%) !important;
+    border-right: 1px solid var(--gray-200) !important;
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;  /* 右侧圆角 12px */
+}
+
+[data-testid="stSidebar"] > div {
+    background: transparent !important;
+}
+
+/* 侧边栏标题区域 */
+.sidebar-header {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);  /* 32px 16px */
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    margin: calc(-1 * var(--spacing-md));
+    margin-bottom: var(--spacing-lg);  /* 24px */
+    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;  /* 16px */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);  /* 8px */
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text h1 {
+    color: white !important;
+    font-size: var(--font-size-h2) !important;  /* 18px */
+    font-weight: var(--font-weight-bold) !important;  /* 700 */
+    margin: 0 !important;
+    line-height: var(--line-height-tight) !important;
+}
+
+.logo-text p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: var(--font-size-caption) !important;  /* 12px */
+    margin: 0 !important;
+    opacity: 0.9;
+}
+
+/* 导航项样式 */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);  /* 8px */
+    padding: var(--spacing-md);  /* 16px */
+    margin: var(--spacing-xs) 0;  /* 4px */
+    border-radius: var(--radius-md) !important;  /* 8px */
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+    background: transparent;
+}
+
+.nav-item:hover {
+    background: var(--gray-200);
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, var(--brand-primary-light) 0%, #BFDBFE 100%);
+    color: var(--brand-primary);
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+    border-left: 3px solid var(--brand-primary);
+}
+
+/* 导航图标 - 统一线性风格 */
+.nav-icon {
+    font-size: 1.125rem;  /* 18px */
+    width: 24px;
+    text-align: center;
+    color: var(--icon-color-default) !important;  /* 默认 #666 */
+    stroke-width: var(--icon-stroke-width) !important;  /* 1.5px 线宽 */
+}
+
+.nav-item.active .nav-icon,
+.nav-item:hover .nav-icon {
+    color: var(--icon-color-active) !important;  /* 选中态主色 */
+}
+
+.nav-label {
+    font-size: var(--font-size-body) !important;  /* 14px */
+    flex: 1;
+    font-weight: var(--font-weight-regular) !important;  /* 400 */
+}
+
+.nav-item.active .nav-label {
+    font-weight: var(--font-weight-medium) !important;  /* 500 */
+}
+
+/* 版本信息区域 */
+.version-info {
+    text-align: center;
+    padding: var(--spacing-lg);  /* 24px */
+    margin-top: auto;
+    background: var(--gray-100);
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    border: 1px solid var(--gray-200);
+}
+
+.version-info strong {
+    color: var(--brand-primary) !important;
+    font-size: var(--font-size-h2) !important;  /* 18px */
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+}
+
+.version-info small {
+    color: var(--gray-500) !important;
+    font-size: var(--font-size-caption) !important;  /* 12px */
+}
+
+/* ============================================
+   Toast 通知系统 - 企业级B端规范 v4.0
+   滑入动画 | 3秒自动消失 | 手动关闭 | 防堆叠
+   对标 Vercel/Linear/GitHub 通知体验
+   ============================================ */
+
+/* ===== Toast容器 - 固定定位 + 防遮挡 ===== */
+.toast-container {
+    position: fixed;
+    top: var(--spacing-lg);  /* 24px */
+    right: var(--spacing-lg);  /* 24px */
+    z-index: 10000;  /* 最高层级，确保不被遮挡 */
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important;  /* 统一间距 */
+    pointer-events: none;
+    max-width: 420px;  /* 最大宽度限制 */
+    max-height: calc(100vh - 48px);  /* 不超出视口 */
+    overflow-y: auto;  /* 超出时可滚动 */
+    overflow-x: hidden;
+
+    /* 自定义滚动条（隐藏式）*/
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.toast-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.toast-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toast-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+/* ===== Toast卡片主体 ===== */
+.toast {
+    position: relative;
+    min-width: 300px;
+    width: 100%;
+    padding: 16px 20px !important;  /* 统一内边距 */
+    border-radius: var(--radius-md) !important;  /* 8px 圆角 */
+    box-shadow: 
+        0 10px 25px -5px rgba(0, 0, 0, 0.15),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    display: flex;
+    align-items: center;
+    gap: 14px !important;
+    animation: toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: auto;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* 初始状态：完全隐藏在右侧 */
+    opacity: 1;
+}
+
+/* ===== Toast类型样式 - 渐变背景 + 左侧色条 ===== */
+
+/* 成功通知 - 绿色系 */
+.toast-success {
+    background: linear-gradient(
+        135deg,
+        rgba(16, 185, 129, 0.96) 0%,
+        rgba(5, 150, 105, 0.98) 100%
+    ) !important;
+    color: #FFFFFF !important;
+    border-left: 4px solid #059669 !important;
+}
+
+/* 错误通知 - 红色系 */
+.toast-error {
+    background: linear-gradient(
+        135deg,
+        rgba(239, 68, 68, 0.96) 0%,
+        rgba(220, 38, 38, 0.98) 100%
+    ) !important;
+    color: #FFFFFF !important;
+    border-left: 4px solid #DC2626 !important;
+}
+
+/* 警告通知 - 橙色系 */
+.toast-warning {
+    background: linear-gradient(
+        135deg,
+        rgba(245, 158, 11, 0.96) 0%,
+        rgba(217, 119, 6, 0.98) 100%
+    ) !important;
+    color: #FFFFFF !important;
+    border-left: 4px solid #D97706 !important;
+}
+
+/* 信息通知 - 蓝色系 */
+.toast-info {
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.96) 0%,
+        rgba(37, 99, 235, 0.98) 100%
+    ) !important;
+    color: #FFFFFF !important;
+    border-left: 4px solid #2563EB !important;
+}
+
+/* ===== Toast内容区域 ===== */
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px !important;
+    flex: 1;
+    min-width: 0;  /* 允许文本截断 */
+}
+
+/* 图标样式 */
+.toast-icon {
+    font-size: 1.35rem;  /* 21.6px */
+    line-height: 1;
+    flex-shrink: 0;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* 消息文字 */
+.toast-message {
+    font-size: var(--font-size-body) !important;  /* 14px */
+    font-weight: var(--font-weight-medium) !important;  /* 500 */
+    line-height: 1.5 !important;
+    flex: 1;
+    word-break: break-word;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 关闭按钮 - 精致交互设计 ===== */
+.toast-close {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: inherit;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm) !important;  /* 6px */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast) !important;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+/* Hover态 - 背景加深 */
+.toast-close:hover {
+    background: rgba(255, 255, 255, 0.28) !important;
+    transform: scale(1.08) !important;
+    opacity: 1;
+}
+
+/* Active态 - 下沉效果 */
+.toast-close:active {
+    transform: scale(0.95) !important;
+    background: rgba(255, 255, 255, 0.38) !important;
+}
+
+/* ===== 自动消失进度条 ===== */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    animation: toastProgress linear forwards;
+}
+
+@keyframes toastProgress {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+/* ===== 动画系统 ===== */
+
+/* 滑入动画 - 从右侧平滑进入 */
+@keyframes toastSlideIn {
+    from {
+        transform: translateX(calc(100% + 30px));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 滑出动画 - 向右侧滑出并淡出 */
+@keyframes toastSlideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 200px;
+        margin-bottom: 12px;
+        padding: 16px 20px;
+    }
+    to {
+        transform: translateX(calc(100% + 30px));
+        opacity: 0;
+        max-height: 0;
+        margin-bottom: 0;
+        padding: 0 20px;
+    }
+}
+
+/* 应用滑出动画类 */
+.toast.slide-out {
+    animation: toastSlideOut 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
+    pointer-events: none;
+}
+
+/* ===== 堆叠处理 - 避免遮挡内容 ===== */
+
+/* 当有多个Toast时，降低后面Toast的不透明度 */
+.toast-container .toast:not(:last-child) {
+    opacity: 0.92;
+    transform: scale(0.99);
+}
+
+/* Hover时暂停所有动画 */
+.toast:hover {
+    animation-play-state: paused !important;
+}
+
+.toast:hover .toast-progress {
+    animation-play-state: paused !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 768px) {
+    .toast-container {
+        left: var(--spacing-md);  /* 16px */
+        right: var(--spacing-md);  /* 16px */
+        top: var(--spacing-md);  /* 16px */
+        max-width: none;
+    }
+
+    .toast {
+        min-width: auto;
+        width: 100%;
+        padding: 14px 16px !important;
+    }
+
+    .toast-message {
+        font-size: 13px !important;
+    }
+
+    .toast-icon {
+        font-size: 1.2rem;
+    }
+
+    .toast-close {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* ============================================
+   加载状态与骨架屏
+   ============================================ */
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl) !important;  /* 48px */
+    gap: var(--spacing-md) !important;  /* 16px */
+}
+
+.spinner-ring {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gray-200);
+    border-top-color: var(--brand-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loading-spinner p {
+    color: var(--gray-500);
+    font-size: var(--font-size-caption) !important;  /* 12px */
+    margin: 0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 骨架屏组件 (圆角: 8px) */
+.skeleton-card {
+    background: linear-gradient(90deg,
+        var(--gray-200) 0%,
+        var(--gray-100) 50%,
+        var(--gray-200) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    padding: var(--spacing-lg) !important;  /* 24px */
+    height: 120px;
+}
+
+.skeleton-line {
+    background: linear-gradient(90deg,
+        var(--gray-300) 0%,
+        var(--gray-200) 50%,
+        var(--gray-300) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--radius-sm) !important;  /* 6px */
+}
+
+.skeleton-title {
+    height: 24px;
+    width: 60%;
+    margin-bottom: var(--spacing-md) !important;  /* 16px */
+}
+
+.skeleton-value {
+    height: 28px;  /* 对应一级标题高度 */
+    width: 40%;
+}
+
+.skeleton-table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm) !important;  /* 8px */
+}
+
+.skeleton-row {
+    display: flex;
+    gap: var(--spacing-sm) !important;  /* 8px */
+}
+
+.skeleton-cell {
+    flex: 1;
+    height: 36px;  /* 对应输入框高度 */
+    background: linear-gradient(90deg,
+        var(--gray-200) 0%,
+        var(--gray-100) 50%,
+        var(--gray-200) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--radius-sm) !important;  /* 6px */
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ============================================
+   空状态设计 - 企业级B端规范 v4.0
+   统一图标 | 统一文案 | 统一按钮样式
+   对标 Notion/Airtable/Linear
+   ============================================ */
+
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-xl) !important;  /* 64px 32px */
+    background: linear-gradient(135deg, var(--gray-50) 0%, #FFFFFF 100%);
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    border: 2px dashed var(--gray-300);
+    margin: var(--spacing-lg) 0 !important;  /* 24px */
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景装饰图案 */
+.empty-state::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg) !important;  /* 24px */
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+    filter: grayscale(30%);
+    opacity: 0.7;
+}
+
+/* 统一空状态标题样式 */
+.empty-state-title {
+    font-size: var(--font-size-h2) !important;  /* 18px */
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+    color: var(--gray-800) !important;
+    margin-bottom: var(--spacing-sm) !important;  /* 8px */
+    line-height: var(--line-height-tight) !important;
+}
+
+/* 统一空状态描述文案 */
+.empty-state-description {
+    font-size: var(--font-size-body) !important;  /* 14px */
+    color: var(--gray-500) !important;
+    max-width: 420px;
+    margin: 0 auto var(--spacing-xl) !important;  /* 32px */
+    line-height: var(--line-height-normal) !important;
+}
+
+/* 统一操作按钮区域 */
+.empty-state-actions {
+    display: flex;
+    gap: var(--spacing-md) !important;  /* 16px */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 空状态主操作按钮（Primary）*/
+.empty-state-actions .btn-primary,
+.empty-state button[class*="primary"] {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%) !important;
+    color: white !important;
+    padding: 12px 28px !important;
+    border-radius: var(--radius-md) !important;  /* 8px */
+    font-weight: var(--font-weight-semibold) !important;
+    font-size: var(--font-size-body) !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all var(--transition-normal) !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2) !important;
+}
+
+.empty-state-actions .btn-primary:hover,
+.empty-state button[class*="primary"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* 空状态次要操作按钮（Secondary/Ghost）*/
+.empty-state-actions .btn-secondary,
+.empty-state button:not([class*="primary"]) {
+    background: transparent !important;
+    color: var(--gray-700) !important;
+    padding: 12px 28px !important;
+    border-radius: var(--radius-md) !important;  /* 8px */
+    font-weight: var(--font-weight-medium) !important;
+    font-size: var(--font-size-body) !important;
+    border: 2px solid var(--gray-300) !important;
+    cursor: pointer !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.empty-state-actions .btn-secondary:hover,
+.empty-state button:not([class*="primary"]):hover {
+    border-color: var(--gray-400) !important;
+    background: var(--gray-100) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* 功能特点列表（可选）*/
+.empty-state-features {
+    margin-top: var(--spacing-xl) !important;  /* 32px */
+    text-align: left;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-state-features h4 {
+    font-size: var(--font-size-caption) !important;  /* 12px */
+    font-weight: var(--font-weight-semibold) !important;
+    color: var(--gray-500) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm) !important;  /* 8px */
+}
+
+.empty-state-features ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.empty-state-features li {
+    padding: 8px 0 !important;
+    font-size: var(--font-size-body) !important;  /* 14px */
+    color: var(--gray-600) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.empty-state-features li::before {
+    content: "✓";
+    color: var(--color-success) !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   数据表格增强 (圆角: 12px)
+   ============================================ */
+
+.stDataFrame {
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md) !important;
+    border: 1px solid var(--gray-200) !important;
+}
+
+.stDataFrame table {
+    font-size: var(--font-size-caption) !important;  /* 12px */
+}
+
+.stDataFrame th {
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-50) 100%) !important;
+    color: var(--gray-700) !important;
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+    text-transform: uppercase !important;
+    font-size: var(--font-size-small) !important;  /* 11px */
+    letter-spacing: 0.05em !important;
+    padding: var(--spacing-md) !important;  /* 16px */
+}
+
+.stDataFrame td {
+    padding: var(--spacing-md) !important;  /* 16px */
+    border-bottom: 1px solid var(--gray-100) !important;
+    font-size: var(--font-size-body) !important;  /* 14px */
+}
+
+.stDataFrame tr:hover {
+    background: var(--gray-50) !important;
+}
+
+/* ============================================
+   图表容器增强 (圆角: 12px)
+   ============================================ */
+
+.stPlotlyChart {
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md) !important;
+    border: 1px solid var(--gray-200) !important;
+    padding: var(--spacing-md) !important;  /* 16px */
+    background: white !important;
+}
+
+/* ============================================
+   Tabs 标签页增强 (圆角: 8px)
+   ============================================ */
+
+.stTabs [data-baseweb="tab-list"] {
+    background: var(--gray-100) !important;
+    border-radius: var(--radius-md) !important;  /* 8px */
+    padding: var(--spacing-xs) !important;  /* 4px */
+    gap: var(--spacing-xs) !important;  /* 4px */
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: var(--radius-sm) !important;  /* 6px */
+    font-weight: var(--font-weight-medium) !important;  /* 500 */
+    padding: var(--spacing-sm) var(--spacing-lg) !important;  /* 8px 24px */
+    transition: all var(--transition-fast) !important;
+    font-size: var(--font-size-body) !important;  /* 14px */
+}
+
+.stTabs [aria-selected="true"] {
+    background: white !important;
+    color: var(--brand-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* ============================================
+   输入框与表单元素 - 企业级交互规范 v4.0
+   Hover/Focus/Active 状态 | 加载状态 | 错误提示
+   ============================================ */
+
+/* ===== 文本输入框 ===== */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div > select,
+.stTextArea > div > div > textarea {
+    border-radius: var(--radius-md) !important;  /* 8px */
+    border: 2px solid var(--gray-200) !important;
+    padding: 10px 12px !important;  /* 统一内边距 */
+    transition: all var(--transition-fast) !important;
+    font-size: var(--font-size-body) !important;  /* 14px */
+    line-height: 1.5 !important;
+    background: #FFFFFF !important;
+    color: var(--gray-800) !important;
+}
+
+/* 默认态 - 浅灰边框 */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div > select,
+.stTextArea > div > div > textarea {
+    border-color: var(--gray-200) !important;
+}
+
+/* Hover态 - 边框加深 + 轻微阴影 */
+.stTextInput > div > div > input:hover,
+.stNumberInput > div > div > input:hover,
+.stSelectbox > div > div > select:hover,
+.stTextArea > div > div > textarea:hover {
+    border-color: var(--gray-300) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Focus态 - 主色边框 + 光晕效果 */
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--brand-primary) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1), 0 2px 8px rgba(37, 99, 235, 0.08) !important;
+    outline: none !important;
+}
+
+/* Active态（输入时）- 更深的焦点环 */
+.stTextInput > div > div > input:active,
+.stNumberInput > div > div > input:active,
+.stSelectbox > div > div > select:active,
+.stTextArea > div > div > textarea:active {
+    border-color: var(--brand-primary-hover) !important;
+}
+
+/* 错误态 - 红色边框 + 红色光晕 */
+.stTextInput > div > div > input:invalid,
+.stNumberInput > div > div > input:invalid,
+.stTextInput[data-testid="stTextInput"] > div > div > input[aria-invalid="true"],
+.stNumberInput[data-testid="stNumberInput"] > div > div > input[aria-invalid="true"] {
+    border-color: var(--color-error) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* 禁用态 - 置灰 + 不可交互 */
+.stTextInput > div > div > input:disabled,
+.stNumberInput > div > div > input:disabled,
+.stSelectbox > div > div > select:disabled,
+.stTextArea > div > div > textarea:disabled {
+    background: var(--gray-100) !important;
+    color: var(--gray-400) !important;
+    cursor: not-allowed !important;
+    border-color: var(--gray-200) !important;
+}
+
+/* Placeholder样式 */
+.stTextInput > div > div > input::placeholder,
+.stNumberInput > div > div > input::placeholder,
+.stTextArea > div > div > textarea::placeholder {
+    color: var(--gray-400) !important;
+    opacity: 1 !important;
+}
+
+/* ===== Slider 滑块增强 ===== */
+.stSlider [data-baseweb="slider"] {
+    height: 6px !important;
+    background: var(--gray-200) !important;
+    border-radius: var(--radius-full) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.stSlider [data-baseweb="slider"]:hover {
+    background: var(--gray-300) !important;
+}
+
+.stSlider [data-baseweb="thumb"] {
+    width: 20px !important;  /* 增大点击区域 */
+    height: 20px !important;
+    border: 3px solid var(--brand-primary) !important;
+    background: white !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all var(--transition-fast) !important;
+    cursor: pointer !important;
+}
+
+.stSlider [data-baseweb="thumb"]:hover {
+    transform: scale(1.15) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--brand-primary-hover) !important;
+}
+
+.stSlider [data-baseweb="thumb"]:active {
+    transform: scale(1.05) !important;
+}
+
+/* ===== Checkbox & Radio 复选框/单选框 ===== */
+.stCheckbox [role="checkbox"],
+.stRadio [role="radio"] {
+    transition: all var(--transition-fast) !important;
+    cursor: pointer !important;
+}
+
+.stCheckbox [role="checkbox"]:hover,
+.stRadio [role="radio"]:hover {
+    background: var(--gray-100) !important;
+}
+
+.stCheckbox [role="checkbox"]:focus-visible,
+.stRadio [role="radio"]:focus-visible {
+    outline: 2px solid var(--brand-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* ============================================
+   进度条增强
+   ============================================ */
+
+.stProgress > div > div > div > div {
+    background: linear-gradient(90deg,
+        var(--brand-primary) 0%,
+        var(--brand-secondary) 100%) !important;
+    border-radius: var(--radius-full) !important;
+    height: 8px !important;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* ============================================
+   Expander 折叠面板增强 (圆角: 12px)
+   ============================================ */
+
+.stExpander {
+    border: 1px solid var(--gray-200) !important;
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    box-shadow: var(--shadow-sm) !important;
+    margin: var(--spacing-sm) 0 !important;  /* 8px */
+    overflow: hidden !important;
+}
+
+.stExpander > details > summary {
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+    color: var(--gray-700) !important;
+    background: var(--gray-50) !important;
+    padding: var(--spacing-md) !important;  /* 16px */
+    font-size: var(--font-size-body) !important;  /* 14px */
+}
+
+.stExpander > details > summary:hover {
+    background: var(--gray-100) !important;
+}
+
+/* ============================================
+   Badge/标签样式 (圆角: 4px)
+   ============================================ */
+
+.badge, .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px var(--spacing-sm) !important;  /* 2px 8px */
+    border-radius: var(--radius-xs) !important;  /* 4px */
+    font-size: var(--font-size-small) !important;  /* 11px */
+    font-weight: var(--font-weight-medium) !important;  /* 500 */
+    line-height: 1.5 !important;
+}
+
+.badge-primary {
+    background: var(--brand-primary-light);
+    color: var(--brand-primary);
+}
+
+.badge-success {
+    background: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.badge-warning {
+    background: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.badge-error {
+    background: var(--color-error-light);
+    color: var(--color-error);
+}
+
+/* ============================================
+   页脚信息区域 (圆角: 12px)
+   ============================================ */
+
+.app-footer {
+    margin-top: var(--spacing-2xl) !important;  /* 48px */
+    padding: var(--spacing-lg) !important;  /* 24px */
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-50) 100%);
+    border-radius: var(--radius-lg) !important;  /* 12px */
+    border: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.footer-branding strong {
+    color: var(--brand-primary) !important;
+    font-size: var(--font-size-h2) !important;  /* 18px */
+    font-weight: var(--font-weight-semibold) !important;  /* 600 */
+}
+
+.footer-branding small {
+    color: var(--gray-500) !important;
+    font-size: var(--font-size-caption) !important;  /* 12px */
+}
+
+/* ============================================
+   响应式设计优化
+   ============================================ */
+
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: var(--spacing-md) !important;  /* 16px */
+    }
+
+    .metric-card {
+        padding: var(--spacing-md) !important;  /* 16px */
+    }
+
+    .toast {
+        min-width: 280px;
+        max-width: calc(100vw - 40px);
+    }
+
+    .empty-state-icon {
+        font-size: 2.5rem;
+    }
+
+    /* 移动端文字层级调整 */
+    h1, .text-h1 {
+        font-size: 20px !important;
+    }
+
+    h2, .text-h2 {
+        font-size: 16px !important;
+    }
+
+    .sidebar-header {
+        padding: var(--spacing-md) !important;  /* 16px */
+    }
+
+    .logo-text h1 {
+        font-size: 16px !important;
+    }
+}

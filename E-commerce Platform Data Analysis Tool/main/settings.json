@@ -1,0 +1,11 @@
+{
+  "default_keyword": "食品",
+  "default_product_count": 50,
+  "default_review_count": 100,
+  "output_format": "JSON",
+  "headless_mode": false,
+  "auto_save": true,
+  "timeout": 30,
+  "retry_count": 3,
+  "last_updated": "2026-04-12 22:16:49"
+}

@@ -1,0 +1,19 @@
+{
+    "ocr": {
+        "app_id": "7621635",
+        "api_key": "PxvC6hGrgmxBFrIrbG7SBGYv",
+        "secret_key": "sXiUEr6o4NJ078WGjD8A46DBciUyKnNw"
+    },
+    "llm": {
+        "provider": "deepseek",
+        "api_key": "sk-ab7d3b5d816b4a35888f933a7b7d5682",
+        "base_url": "https://api.deepseek.com/v1"
+    },
+    "crawler": {
+        "headless": false,
+        "browser": "edge",
+        "request_delay_min": 1,
+        "request_delay_max": 3,
+        "max_retries": 3
+    }
+}

@@ -1,0 +1,488 @@
+{
+  "timestamp": "20260412_225937",
+  "keyword": "牛奶",
+  "products": [
+    {
+      "platform_product_id": "",
+      "name": "入选高蛋白纯牛奶热销",
+      "price": 35.0,
+      "sales_count": 0,
+      "shop_name": "供港壹号旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "3月产特惠促销蒙牛纯牛奶200ml24盒1提早餐牛奶官方正品速发方包",
+      "price": 43.0,
+      "sales_count": 0,
+      "shop_name": "蒙牛皓兴望悦专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【1月产】 新希望华西特浓牛奶250ml早餐奶整箱24盒牛奶儿童奶",
+      "price": 59.0,
+      "sales_count": 0,
+      "shop_name": "回头客1万\n华西乳品旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "3月产蒙牛三只小牛纯牛奶250ml*24盒整箱学生儿童营养早餐牛奶",
+      "price": 37.0,
+      "sales_count": 0,
+      "shop_name": "回头客1万\n蒙牛艾悦专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "冷藏纯牛奶回购",
+      "price": 59.0,
+      "sales_count": 0,
+      "shop_name": "回头客2万\n悦鲜活旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "4月新货 伊利纯牛奶250mlX24盒学生成人牛奶整箱营养牛奶",
+      "price": 56.0,
+      "sales_count": 0,
+      "shop_name": "回头客3万\n伊利光焰专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选88VIP甄选纯牛奶好评",
+      "price": 38.0,
+      "sales_count": 0,
+      "shop_name": "回头客90万\n金典旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "新希望香蕉牛奶200ml*6盒/箱常温风味牛奶【尝鲜装】 3月新产",
+      "price": 11.0,
+      "sales_count": 0,
+      "shop_name": "NEWHOPE新希望白帝专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选百亿补贴纯牛奶回购",
+      "price": 32.0,
+      "sales_count": 0,
+      "shop_name": "百亿补贴品牌优选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "百亿补贴纯牛奶回购",
+      "price": 34.0,
+      "sales_count": 0,
+      "shop_name": "回头客90万\n金典旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选高钙纯牛奶回购",
+      "price": 39.0,
+      "sales_count": 0,
+      "shop_name": "蒙牛联营专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "宁夏塞北牧乡4.0g蛋白大漠纯牛奶奶香浓郁200ml*10盒学生营养高钙",
+      "price": 20.0,
+      "sales_count": 0,
+      "shop_name": "回头客300万\n国货严选旗舰",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "光明新鲜牧场950ml高品质鲜奶低温纯牛奶整箱儿童营养早餐新日期",
+      "price": 22.0,
+      "sales_count": 0,
+      "shop_name": "5年老店\n开琪食品专营店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "4月新货 伊利谷粒多黑红谷牛奶250ml*16盒装整箱谷物营养牛奶正品",
+      "price": 30.0,
+      "sales_count": 0,
+      "shop_name": "伊利伊诺一专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选源头优选儿童牛奶回购",
+      "price": 26.0,
+      "sales_count": 0,
+      "shop_name": "回头客4万\n菊乐旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选全脂纯牛奶好评",
+      "price": 54.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n光明乳业官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "北亩时倾 半斤新疆奶产地直发250g*10袋 原生态无添加天山牛奶",
+      "price": 29.0,
+      "sales_count": 0,
+      "shop_name": "北亩时倾乳品旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【新日期】李子园牛奶225ml原味巧克力味学生早餐奶饮料整箱批发",
+      "price": 4.0,
+      "sales_count": 0,
+      "shop_name": "回头客8万\n味然食品专营店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "盒装纯牛奶回购",
+      "price": 53.0,
+      "sales_count": 0,
+      "shop_name": "回头客100万\n伊利旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "源头优选纯牛奶回购",
+      "price": 49.0,
+      "sales_count": 0,
+      "shop_name": "回头客20万\n欧亚食品旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "云南欧亚牛奶纯高原全脂200克20盒整箱营养早餐乳制品新日期牛奶",
+      "price": 9.0,
+      "sales_count": 0,
+      "shop_name": "回头客300万\n国货严选旗舰",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【顺丰】新希望低温牛奶今日鲜奶铺255ml/瓶营养早餐奶优质乳蛋白",
+      "price": 27.0,
+      "sales_count": 0,
+      "shop_name": "NEWHOPE新希望白帝专卖店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "蒙牛纯牛奶全脂灭菌乳早餐250ml×18包整箱",
+      "price": 33.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n百亿补贴官方精选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "百亿补贴低温鲜奶热销",
+      "price": 20.0,
+      "sales_count": 0,
+      "shop_name": "百亿补贴品牌优选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "常温纯牛奶热销",
+      "price": 35.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n百亿补贴官方精选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "脱脂纯牛奶回购",
+      "price": 79.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n德亚旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "光明纯牛奶200ml*24盒整箱学生营养早餐奶箱装纯奶",
+      "price": 42.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n光明乳业官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "儿童牛奶热销",
+      "price": 9.0,
+      "sales_count": 0,
+      "shop_name": "5年老店\n忠厚旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "光明A2β-酪蛋白纯牛奶125ml*4盒mini装儿童牛奶",
+      "price": 9.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n光明乳业官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【最早日期12月产】蒙牛特仑苏早餐纯牛奶250ml*16包高端品质",
+      "price": 46.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "淘工厂纯牛奶好评",
+      "price": 8.0,
+      "sales_count": 0,
+      "shop_name": "回头客400万\n官方国货甄选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【12月产】伊利高钙低脂牛奶整箱礼盒健身代餐营养早餐低负担",
+      "price": 39.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【淘宝秒杀】旺旺旺仔牛奶125ml聚会整箱礼盒婚礼伴手礼情侣礼物",
+      "price": 32.0,
+      "sales_count": 0,
+      "shop_name": "回头客40万\n旺旺官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "天猫超市纯牛奶好评",
+      "price": 39.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【U先试用】德亚德国进口高钙早餐纯牛奶200ml*6盒尝鲜装",
+      "price": 15.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n德亚旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选百亿补贴纯牛奶热销",
+      "price": 48.0,
+      "sales_count": 0,
+      "shop_name": "回头客100万\n伊利旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选盒装纯牛奶回购",
+      "price": 57.0,
+      "sales_count": 0,
+      "shop_name": "回头客3万\n盒马官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "入选源头优选纯牛奶热销",
+      "price": 8.0,
+      "sales_count": 0,
+      "shop_name": "6年老店\n青藏人家旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "百亿补贴牛奶饮品回购",
+      "price": 37.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "天猫超市纯牛奶好评",
+      "price": 49.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "【超市独家】伊利金典纯牛奶整箱优质蛋白高钙学生家庭早餐囤货装",
+      "price": 60.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n天猫超市",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "轻上DHA草莓小奶儿童牛奶饮品营养早餐搭配生牛乳含乳饮料旗舰店",
+      "price": 29.0,
+      "sales_count": 0,
+      "shop_name": "回头客20万\n轻上旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "百亿补贴牛奶饮品回购",
+      "price": 30.0,
+      "sales_count": 0,
+      "shop_name": "回头客1000万\n百亿补贴官方精选",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "源头优选纯牛奶回购",
+      "price": 9.0,
+      "sales_count": 0,
+      "shop_name": "回头客20万\n欧亚食品旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "脱脂纯牛奶热销",
+      "price": 37.0,
+      "sales_count": 0,
+      "shop_name": "回头客100万\n伊利旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "楼兰牛哞哞纯牛奶200ml*10盒/箱新货全脂营养学生早餐奶",
+      "price": 49.0,
+      "sales_count": 0,
+      "shop_name": "7年老店\n天天特卖工厂",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "光明高钙低脂肪牛奶250ml*24盒营养早餐奶整箱",
+      "price": 65.0,
+      "sales_count": 0,
+      "shop_name": "回头客9万\n光明乳业官方旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    },
+    {
+      "platform_product_id": "",
+      "name": "新西兰进口纽仕兰4.0g优质乳蛋白全脂低脂纯牛奶250ml*6支",
+      "price": 21.0,
+      "sales_count": 0,
+      "shop_name": "11年老店\ntheland纽仕兰旗舰店",
+      "detail_url": "",
+      "ingredient_img_url": null,
+      "nutrition_img_url": null
+    }
+  ],
+  "count": 48,
+  "login_mode": "realtime"
+}

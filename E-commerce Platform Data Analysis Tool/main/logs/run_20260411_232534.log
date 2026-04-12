@@ -1,0 +1,7 @@
+2026-04-11 23:25:34,304 - config.config_manager - INFO - 配置加载成功
+2026-04-11 23:25:34,306 - database.db_manager - INFO - 数据库初始化完成
+2026-04-11 23:25:34,307 - __main__ - ERROR - 程序运行出错: No module named 'crawlers.tmall_crawler'
+Traceback (most recent call last):
+  File "D:\data analyticss\food_analyzer\main.py", line 74, in main
+    from crawlers.tmall_crawler import TmallCrawler
+ModuleNotFoundError: No module named 'crawlers.tmall_crawler'

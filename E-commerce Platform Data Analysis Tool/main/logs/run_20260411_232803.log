@@ -1,0 +1,205 @@
+2026-04-11 23:28:03,347 - config.config_manager - INFO - 配置加载成功
+2026-04-11 23:28:03,349 - database.db_manager - INFO - 数据库初始化完成
+2026-04-11 23:28:03,555 - config.config_manager - INFO - 配置加载成功
+2026-04-11 23:28:03,556 - WDM - INFO - ====== WebDriver manager ======
+2026-04-11 23:28:04,729 - WDM - INFO - Get LATEST edgedriver version for Edge 146.0.3856
+2026-04-11 23:28:05,805 - crawlers.selenium_base_crawler - INFO - Browser started successfully: edge (headless=False)
+2026-04-11 23:28:05,806 - crawlers.tmall_crawler_selenium - INFO - 
+======================================================================
+2026-04-11 23:28:05,806 - crawlers.tmall_crawler_selenium - INFO - 🚀 开始采集天猫食品类目 TOP 50 商品
+2026-04-11 23:28:05,807 - crawlers.tmall_crawler_selenium - INFO - ======================================================================
+
+2026-04-11 23:28:05,807 - crawlers.tmall_crawler_selenium - INFO - 
+============================================================
+2026-04-11 23:28:05,807 - crawlers.tmall_crawler_selenium - INFO - 🔍 开始搜索商品: 食品
+2026-04-11 23:28:05,807 - crawlers.tmall_crawler_selenium - INFO - ============================================================
+
+2026-04-11 23:28:05,898 - crawlers.tmall_crawler_selenium - INFO - Successfully loaded 36 cookies
+2026-04-11 23:28:05,900 - crawlers.tmall_crawler_selenium - INFO - 
+📋 尝试搜索策略 1/2...
+2026-04-11 23:28:05,900 - crawlers.tmall_crawler_selenium - INFO - Request #1: https://s.taobao.com/search?fromTmallRedirect=true&tab=mall&q=食品&s=0...
+2026-04-11 23:28:11,591 - crawlers.tmall_crawler_selenium - INFO - Popup monitor started (interval: 3.0s)
+2026-04-11 23:28:11,954 - crawlers.tmall_crawler_selenium - INFO - JS removed 3 popups
+2026-04-11 23:28:15,421 - crawlers.tmall_crawler_selenium - INFO - Page opened successfully (attempt 1/3)
+2026-04-11 23:28:17,902 - crawlers.tmall_crawler_selenium - INFO -    当前URL: https://s.taobao.com/search?fromTmallRedirect=true&q=%E9%A3%9F%E5%93%81&s=0&tab=
+2026-04-11 23:28:17,902 - crawlers.tmall_crawler_selenium - INFO -    页面标题: 
+2026-04-11 23:28:21,669 - crawlers.tmall_crawler_selenium - INFO -    ✅ 通过 [id^='item_id_'] 找到 48 个元素
+2026-04-11 23:28:21,670 - crawlers.tmall_crawler_selenium - INFO - ✅ 策略 1 成功! 找到 48 个商品元素
+2026-04-11 23:29:05,101 - crawlers.tmall_crawler_selenium - INFO - 
+🎉 策略 1 成功采集 48 个商品!
+2026-04-11 23:29:05,102 - crawlers.tmall_crawler_selenium - INFO - 
+============================================================
+2026-04-11 23:29:05,102 - crawlers.tmall_crawler_selenium - INFO - 📊 搜索完成! 共采集 48 个商品
+2026-04-11 23:29:05,102 - crawlers.tmall_crawler_selenium - INFO - ============================================================
+
+2026-04-11 23:29:05,102 - crawlers.tmall_crawler_selenium - INFO - 
+[1/48] 📦 正在采集: 牧谣酱牛肉卤牛肉熟食便携真空独立小包装开袋即食休闲解馋零食...
+2026-04-11 23:29:05,102 - crawlers.tmall_crawler_selenium - INFO - 
+[2/48] 📦 正在采集: 丹东草莓热销...
+2026-04-11 23:29:05,103 - crawlers.tmall_crawler_selenium - INFO - 
+[3/48] 📦 正在采集: 源头优选鸡肉肠好评...
+2026-04-11 23:29:05,103 - crawlers.tmall_crawler_selenium - INFO - 
+[4/48] 📦 正在采集: 比比赞无骨鸡爪柠檬酸辣脱骨凤爪去骨鸡爪子解馋零食休闲小吃食品...
+2026-04-11 23:29:05,103 - crawlers.tmall_crawler_selenium - INFO - 
+[5/48] 📦 正在采集: 比比赞奶皮白面包速食营养早餐夹心糕点解馋充饥零食休闲小吃食品...
+2026-04-11 23:29:05,103 - crawlers.tmall_crawler_selenium - INFO - 
+[6/48] 📦 正在采集: 绿豆糕回购...
+2026-04-11 23:29:05,103 - crawlers.tmall_crawler_selenium - INFO - 
+[7/48] 📦 正在采集: 源头优选饼干好评...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[8/48] 📦 正在采集: 每日坚果混合坚果礼盒30小包休闲零食孕妇儿童干果大礼包整箱零食...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[9/48] 📦 正在采集: 盐焗翅中鸡翅鸭翅网红爆款好吃解馋零食休闲食品小吃即食熟食卤味...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[10/48] 📦 正在采集: 入选下酒菜花生好评...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[11/48] 📦 正在采集: 魔芋贡菜魔芋贡菜开袋即食下饭菜香辣爽嘎嘣脆宿舍追剧小吃零食...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[12/48] 📦 正在采集: 源头优选臭豆腐热销...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[13/48] 📦 正在采集: 方便面好评...
+2026-04-11 23:29:05,104 - crawlers.tmall_crawler_selenium - INFO - 
+[14/48] 📦 正在采集: 源头优选薄脆饼干热销...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[15/48] 📦 正在采集: 早餐代餐零食 蒜香法棍切片烤面包片酥性面包干 烤馍片食品非膨化...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[16/48] 📦 正在采集: 皮皮庆干脆面掌心脆干吃方便面整箱装解馋零食休闲食品小吃大礼包...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[17/48] 📦 正在采集: 早餐肉松饼回购...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[18/48] 📦 正在采集: 入选嘉兴粽子热销...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[19/48] 📦 正在采集: 礼盒装月饼热销...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[20/48] 📦 正在采集: 入选百亿补贴曲奇热销...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[21/48] 📦 正在采集: 百亿补贴蛋黄酥热销...
+2026-04-11 23:29:05,105 - crawlers.tmall_crawler_selenium - INFO - 
+[22/48] 📦 正在采集: 比比赞厚切吐司手撕面包早餐面包糕点整箱夜宵零食办公室休闲食品...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[23/48] 📦 正在采集: 山姆达印尼进口foxs水晶糖四季茶果硬糖果罐装薄荷糖高端零食官方...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[24/48] 📦 正在采集: 油炸花生回购...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[25/48] 📦 正在采集: 火鸡面袋装韩式炸酱干拌面泡面夜宵速食品整箱批发超辣网红方便面...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[26/48] 📦 正在采集: 不等蟹黄酱常温拌面拌饭酱秃黄油大闸蟹蟹肉蟹膏蟹黄正宗官方...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[27/48] 📦 正在采集: 入选鲜炖即食燕窝品牌...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[28/48] 📦 正在采集: 三只松鼠坚果礼盒混合干果食品过年送长辈礼物实用零食大礼包顺丰...
+2026-04-11 23:29:05,106 - crawlers.tmall_crawler_selenium - INFO - 
+[29/48] 📦 正在采集: 阿宽面皮红油速食泡面拌面方便面食品宿舍火鸡免煮麻酱板面袋装...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[30/48] 📦 正在采集: 魔法士干脆面整箱装干吃面小零食品网红爆款解馋小吃货休闲大礼包...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[31/48] 📦 正在采集: 淘宝秒杀糕点热销...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[32/48] 📦 正在采集: 酱卤肉类零食好评...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[33/48] 📦 正在采集: 熔岩巧克力味面包早餐整箱爆浆流心脏脏包解饿小零食小吃休闲食品...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[34/48] 📦 正在采集: 麻辣薯片回购...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[35/48] 📦 正在采集: 白象火鸡面大辣娇韩式奶油咸蛋黄小龙虾干拌面泡面方便面整箱批发...
+2026-04-11 23:29:05,107 - crawlers.tmall_crawler_selenium - INFO - 
+[36/48] 📦 正在采集: 入选源头优选鸡肉肠好评...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[37/48] 📦 正在采集: 入选鱼肉干回购...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[38/48] 📦 正在采集: 比比赞脱油花生五香独立小包装下酒花生米炒货零食休闲小吃食品MS...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[39/48] 📦 正在采集: 源头优选苏打饼干回购...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[40/48] 📦 正在采集: 淘宝秒杀糕点热销...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[41/48] 📦 正在采集: 熔岩巧克力味蛋糕早餐面包榛子味下午茶甜品解馋小零食品小吃美食...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[42/48] 📦 正在采集: 良品铺子酥脆薄饼薄脆饼干零食独立小包装办公室休闲...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[43/48] 📦 正在采集: 1000-2000元燕窝热销...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[44/48] 📦 正在采集: 皮皮庆掌心脆干脆面干吃小鸡面整箱小零食休闲食品小吃大礼包解馋...
+2026-04-11 23:29:05,108 - crawlers.tmall_crawler_selenium - INFO - 
+[45/48] 📦 正在采集: 日本铜锣烧大个华妃同款独立包装面包早餐零食官方旗舰店...
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - 
+[46/48] 📦 正在采集: 入选麻辣素肉回购...
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - 
+[47/48] 📦 正在采集: 盐津铺子鹌鹑蛋盐焗卤蛋小包装铁蛋即食网红卤味零食小吃休闲食品...
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - 
+[48/48] 📦 正在采集: 纯蛋糕面包整箱早餐营养懒人健康代餐夜宵古早鸡蛋糕小吃零食批发...
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - 
+======================================================================
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - 🎉 采集完成！共获取 48 个商品
+2026-04-11 23:29:05,109 - crawlers.tmall_crawler_selenium - INFO - ======================================================================
+
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - INFO - 
+======================================================================
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - INFO - 💬 开始批量采集评价 (48 个商品)
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - INFO - ======================================================================
+
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [1] 缺少商品ID，跳过
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [2] 缺少商品ID，跳过
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [3] 缺少商品ID，跳过
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [4] 缺少商品ID，跳过
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [5] 缺少商品ID，跳过
+2026-04-11 23:29:05,564 - crawlers.tmall_crawler_selenium - WARNING -    [6] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [7] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [8] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [9] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [10] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [11] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [12] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [13] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [14] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [15] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [16] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [17] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [18] 缺少商品ID，跳过
+2026-04-11 23:29:05,565 - crawlers.tmall_crawler_selenium - WARNING -    [19] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [20] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [21] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [22] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [23] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [24] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [25] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [26] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [27] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [28] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [29] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [30] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [31] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [32] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [33] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [34] 缺少商品ID，跳过
+2026-04-11 23:29:05,566 - crawlers.tmall_crawler_selenium - WARNING -    [35] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [36] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [37] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [38] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [39] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [40] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [41] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [42] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [43] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [44] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [45] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [46] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [47] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - WARNING -    [48] 缺少商品ID，跳过
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - INFO - 
+======================================================================
+2026-04-11 23:29:05,567 - crawlers.tmall_crawler_selenium - INFO - ✅ 评价采集完成！共获取 0 条评价
+2026-04-11 23:29:05,568 - crawlers.tmall_crawler_selenium - INFO - ======================================================================
+
+2026-04-11 23:29:07,765 - crawlers.tmall_crawler_selenium - INFO - Browser closed
+2026-04-11 23:29:07,777 - __main__ - ERROR - 程序运行出错: No module named 'chardet'
+Traceback (most recent call last):
+  File "D:\data analyticss\food_analyzer\main.py", line 112, in main
+    from analyzers.ocr_processor import OCRProcessor
+  File "D:\data analyticss\food_analyzer\analyzers\ocr_processor.py", line 5, in <module>
+    from aip import AipOcr
+  File "C:\Users\26095\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aip\__init__.py", line 7, in <module>
+    from .nlp import AipNlp
+  File "C:\Users\26095\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aip\nlp.py", line 16, in <module>
+    import chardet
+ModuleNotFoundError: No module named 'chardet'
